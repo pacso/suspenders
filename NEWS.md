@@ -1,6 +1,7 @@
 master
 
 * Update to Ruby 2.3.1
+* Replace NewRelic with Skylight
 
 1.38.1 (April 20, 2016)
 
