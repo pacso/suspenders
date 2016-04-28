@@ -324,8 +324,8 @@ Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i
       generate 'rspec:install'
     end
 
-    def configure_puma
-      copy_file "puma.rb", "config/puma.rb"
+    def replace_default_puma_configuration
+      copy_file "puma.rb", "config/puma.rb", force: true
     end
 
     def set_up_forego

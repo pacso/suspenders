@@ -137,7 +137,7 @@ module Suspenders
       build :configure_active_job
       build :configure_time_formats
       build :setup_default_rake_task
-      build :configure_puma
+      build :replace_default_puma_configuration
       build :set_up_forego
       build :setup_rack_mini_profiler
     end
