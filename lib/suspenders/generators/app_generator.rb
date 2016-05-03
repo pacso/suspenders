@@ -165,7 +165,6 @@ module Suspenders
         say "Creating Heroku apps"
         build :create_heroku_apps, options[:heroku_flags]
         build :provide_review_apps_setup_script
-        build :set_heroku_serve_static_files
         build :set_heroku_remotes
         build :set_heroku_rails_secrets
         build :set_heroku_application_host
