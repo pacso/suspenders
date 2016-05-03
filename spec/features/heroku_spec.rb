@@ -11,9 +11,6 @@ RSpec.describe "Heroku" do
     it "suspends a project for Heroku" do
       app_name = SuspendersTestHelpers::APP_NAME.dasherize
 
-      expect(FakeHeroku).to(
-        have_gem_included(project_path, "rails_stdout_logging"),
-      )
       expect(FakeHeroku).to have_created_app_for("staging")
       expect(FakeHeroku).to have_created_app_for("production")
       expect(FakeHeroku).to have_configured_vars("staging", "SECRET_KEY_BASE")

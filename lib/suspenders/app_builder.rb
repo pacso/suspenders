@@ -14,8 +14,7 @@ module Suspenders
                    :set_heroku_rails_secrets,
                    :set_heroku_remotes,
                    :set_heroku_application_host,
-                   :set_heroku_serve_static_files,
-                   :set_up_heroku_specific_gems
+                   :set_heroku_serve_static_files
 
     def readme
       template 'README.md.erb', 'README.md'

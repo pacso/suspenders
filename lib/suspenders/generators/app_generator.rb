@@ -57,11 +57,6 @@ module Suspenders
 
     def customize_gemfile
       build :set_ruby_to_version_being_used
-
-      if options[:heroku]
-        build :set_up_heroku_specific_gems
-      end
-
       bundle_command 'install'
       build :configure_simple_form
     end
