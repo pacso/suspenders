@@ -156,7 +156,6 @@ module Suspenders
     ENV["APPLICATION_HOST"] = ENV["HEROKU_APP_NAME"] + ".herokuapp.com"
   end
 
-  # Ensure requests are only served from one, canonical host name
   config.middleware.use Rack::CanonicalHost, ENV.fetch("APPLICATION_HOST")
       RUBY
 
@@ -170,7 +169,6 @@ module Suspenders
     def enable_rack_deflater
       config = <<-RUBY
 
-  # Enable deflate / gzip compression of controller-generated responses
   config.middleware.use Rack::Deflater
       RUBY
 
